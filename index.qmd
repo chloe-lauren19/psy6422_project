@@ -12,8 +12,6 @@ editor: visual
 
 ```{r}
 # Install packages - update as you progress through the project
-install.packages("tidyverse")
-install.packages("here")
 
 # Load packages
 library(tidyverse)
