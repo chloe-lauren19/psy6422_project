@@ -4,13 +4,15 @@ format: html
 editor: visual
 ---
 
-# Overview
+# 1.0 Overview
 
 \[Provide overview of what this page contains\]
 
-## Packages
+## 1.1 Packages
 
 ```{r}
+#| message: FALSE
+
 # Install packages - update as you progress through the project
 
 # Load packages
@@ -18,29 +20,44 @@ library(tidyverse)
 library(here)
 ```
 
-# Data Origins
+# 2.0 Data Origins
 
 \[Answering questions of where data comes from, how data were collected, what the variables mean, etc. Show the first few rows of the raw data, if possible.
 
-## Load Data
+## 2.1 Load Data
 
 ```{r}
+#| message: FALSE
+#| results: 'hide'
+
 # Load Open Neuro Metadata dataset
-read_csv(here("datasets", "neuroscience_metadata.csv"))
+neuroscience_data <- read_csv(here("datasets", "neuroscience_metadata.csv"))
 ```
 
-# Research Questions
+## 2.2 Raw Data Summary
+
+```{r}
+# Show the first ten rows of the raw data
+head(neuroscience_data, n = 10)
+
+# Provide a summary of the dataset
+summary(neuroscience_data)
+```
+
+As seen from viewing the first ten rows of the raw data, there are 48 columns. Due to the this, not all variables are shown when using the head() function therefore, I have used the summary() function to gain information about the hidden variables.
+
+# 3.0 Research Questions
 
 \[In plain English, a simple statement of what question(s) your visualisation will attempt to address\]
 
-# Data Preparation
+# 4.0 Data Preparation
 
 \[Steps taken to clean the data, exclude outliers, sanity check the data range and values, create summary statistics, grouped variables, etc. Show the first few rows of the processed data, if possible. Showing the code which does this where relevant\]
 
-# Visualisation
+# 5.0 Visualisation
 
 \[Graph or graphs. Documentation explaining any motivation (although good graph labelling is better than explanation in the accompanying text). Code for producing graph(s)\]
 
-# Summary
+# 6.0 Summary
 
 \[Brief thoughts on what you have learnt, what you might do next if you had more time / more data\]

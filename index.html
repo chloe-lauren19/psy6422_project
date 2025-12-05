@@ -99,81 +99,36 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <section id="overview" class="level1">
-<h1>Overview</h1>
+<h1>1.0 Overview</h1>
 <p>[Provide overview of what this page contains]</p>
 <section id="packages" class="level2">
-<h2 class="anchored" data-anchor-id="packages">Packages</h2>
+<h2 class="anchored" data-anchor-id="packages">1.1 Packages</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Install packages - update as you progress through the project</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Load packages</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
-✔ dplyr     1.1.4     ✔ readr     2.1.5
-✔ forcats   1.0.1     ✔ stringr   1.5.2
-✔ ggplot2   4.0.0     ✔ tibble    3.3.0
-✔ lubridate 1.9.4     ✔ tidyr     1.3.1
-✔ purrr     1.1.0     
-── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-✖ dplyr::filter() masks stats::filter()
-✖ dplyr::lag()    masks stats::lag()
-ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>here() starts at /Users/chloegreenwood/Library/Mobile Documents/com~apple~CloudDocs/University/MSc Cognitive Neuroscience and Human Neuroimaging/PSY6422 Data Analysis and Visualisation/PSY6422_Project</code></pre>
-</div>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 </section>
 <section id="data-origins" class="level1">
-<h1>Data Origins</h1>
+<h1>2.0 Data Origins</h1>
 <p>[Answering questions of where data comes from, how data were collected, what the variables mean, etc. Show the first few rows of the raw data, if possible.</p>
 <section id="load-data" class="level2">
-<h2 class="anchored" data-anchor-id="load-data">Load Data</h2>
+<h2 class="anchored" data-anchor-id="load-data">2.1 Load Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load Open Neuro Metadata dataset</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"datasets"</span>, <span class="st">"neuroscience_metadata.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>New names:
-Rows: 2502 Columns: 48
-── Column specification
-──────────────────────────────────────────────────────── Delimiter: "," chr
-(19): accession_number, dataset_url, dataset_name, made_public, most_rec... dbl
-(3): num_subjects, num_trials, size_gb lgl (26): ...23, ...24, ...25, ...26,
-...27, ...28, ...29, ...30, ...31, ......
-ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
-Specify the column types or set `show_col_types = FALSE` to quiet this message.
-• `` -&gt; `...23`
-• `` -&gt; `...24`
-• `` -&gt; `...25`
-• `` -&gt; `...26`
-• `` -&gt; `...27`
-• `` -&gt; `...28`
-• `` -&gt; `...29`
-• `` -&gt; `...30`
-• `` -&gt; `...31`
-• `` -&gt; `...32`
-• `` -&gt; `...33`
-• `` -&gt; `...34`
-• `` -&gt; `...35`
-• `` -&gt; `...36`
-• `` -&gt; `...37`
-• `` -&gt; `...38`
-• `` -&gt; `...39`
-• `` -&gt; `...40`
-• `` -&gt; `...41`
-• `` -&gt; `...42`
-• `` -&gt; `...43`
-• `` -&gt; `...44`
-• `` -&gt; `...45`
-• `` -&gt; `...46`
-• `` -&gt; `...47`
-• `` -&gt; `...48`</code></pre>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load Open Neuro Metadata dataset</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>neuroscience_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="fu">here</span>(<span class="st">"datasets"</span>, <span class="st">"neuroscience_metadata.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="raw-data-summary" class="level2">
+<h2 class="anchored" data-anchor-id="raw-data-summary">2.2 Raw Data Summary</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the first ten rows of the raw data</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(neuroscience_data, <span class="at">n =</span> <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 2,502 × 48
+<pre><code># A tibble: 10 × 48
    accession_number dataset_url    dataset_name made_public most_recent_snapshot
    &lt;chr&gt;            &lt;chr&gt;          &lt;chr&gt;        &lt;chr&gt;       &lt;chr&gt;               
  1 ds000001         https://openn… ds001        10/12/2016  5/14/2020           
@@ -186,31 +141,132 @@ Specify the column types or set `show_col_types = FALSE` to quiet this message.
  8 ds000009         https://openn… ds000009     12/15/2016  7/14/2018           
  9 ds000011         https://openn… Classificat… 10/13/2016  12/14/2022          
 10 ds000017         https://openn… ds000017     11/7/2016   7/14/2018           
-# ℹ 2,492 more rows
 # ℹ 43 more variables: num_subjects &lt;dbl&gt;, modalities &lt;chr&gt;, dx_status &lt;chr&gt;,
 #   ages &lt;chr&gt;, tasks &lt;chr&gt;, num_trials &lt;dbl&gt;, study_design &lt;chr&gt;,
 #   domain_studied &lt;chr&gt;, longitudinal &lt;chr&gt;, processed_data &lt;chr&gt;,
 #   species &lt;chr&gt;, nondefaced_consent &lt;chr&gt;, affirmed_defaced &lt;chr&gt;,
 #   doi_of_papers_from_source_data_lab &lt;chr&gt;,
-#   doi_of_paper_published_using_openneuro_dataset &lt;chr&gt;, …</code></pre>
+#   doi_of_paper_published_using_openneuro_dataset &lt;chr&gt;, senior_author &lt;chr&gt;,
+#   size_gb &lt;dbl&gt;, ...23 &lt;lgl&gt;, ...24 &lt;lgl&gt;, ...25 &lt;lgl&gt;, ...26 &lt;lgl&gt;, …</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Provide a summary of the dataset</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(neuroscience_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> accession_number   dataset_url        dataset_name       made_public       
+ Length:2502        Length:2502        Length:2502        Length:2502       
+ Class :character   Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+ most_recent_snapshot  num_subjects      modalities         dx_status        
+ Length:2502          Min.   :   0.00   Length:2502        Length:2502       
+ Class :character     1st Qu.:  12.00   Class :character   Class :character  
+ Mode  :character     Median :  25.00   Mode  :character   Mode  :character  
+                      Mean   :  45.27                                        
+                      3rd Qu.:  47.00                                        
+                      Max.   :2951.00                                        
+                      NA's   :1014                                           
+     ages              tasks             num_trials      study_design      
+ Length:2502        Length:2502        Min.   :   -1.0   Length:2502       
+ Class :character   Class :character   1st Qu.:    9.0   Class :character  
+ Mode  :character   Mode  :character   Median :   72.0   Mode  :character  
+                                       Mean   :  807.5                     
+                                       3rd Qu.:  300.0                     
+                                       Max.   :26760.0                     
+                                       NA's   :2297                        
+ domain_studied     longitudinal       processed_data       species         
+ Length:2502        Length:2502        Length:2502        Length:2502       
+ Class :character   Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+ nondefaced_consent affirmed_defaced   doi_of_papers_from_source_data_lab
+ Length:2502        Length:2502        Length:2502                       
+ Class :character   Class :character   Class :character                  
+ Mode  :character   Mode  :character   Mode  :character                  
+                                                                         
+                                                                         
+                                                                         
+                                                                         
+ doi_of_paper_published_using_openneuro_dataset senior_author     
+ Length:2502                                    Length:2502       
+ Class :character                               Class :character  
+ Mode  :character                               Mode  :character  
+                                                                  
+                                                                  
+                                                                  
+                                                                  
+    size_gb          ...23          ...24          ...25          ...26        
+ Min.   :   0.000   Mode:logical   Mode:logical   Mode:logical   Mode:logical  
+ 1st Qu.:   3.188   NA's:2502      NA's:2502      NA's:2502      NA's:2502     
+ Median :  12.180                                                              
+ Mean   :  56.532                                                              
+ 3rd Qu.:  45.005                                                              
+ Max.   :8925.160                                                              
+ NA's   :1024                                                                  
+  ...27          ...28          ...29          ...30          ...31        
+ Mode:logical   Mode:logical   Mode:logical   Mode:logical   Mode:logical  
+ NA's:2502      NA's:2502      NA's:2502      NA's:2502      NA's:2502     
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+  ...32          ...33          ...34          ...35          ...36        
+ Mode:logical   Mode:logical   Mode:logical   Mode:logical   Mode:logical  
+ NA's:2502      NA's:2502      NA's:2502      NA's:2502      NA's:2502     
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+  ...37          ...38          ...39          ...40          ...41        
+ Mode:logical   Mode:logical   Mode:logical   Mode:logical   Mode:logical  
+ NA's:2502      NA's:2502      NA's:2502      NA's:2502      NA's:2502     
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+  ...42          ...43          ...44          ...45          ...46        
+ Mode:logical   Mode:logical   Mode:logical   Mode:logical   Mode:logical  
+ NA's:2502      NA's:2502      NA's:2502      NA's:2502      NA's:2502     
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+                                                                           
+  ...47          ...48        
+ Mode:logical   Mode:logical  
+ NA's:2502      NA's:2502     
+                              
+                              
+                              
+                              
+                              </code></pre>
 </div>
 </div>
+<p>As seen from viewing the first ten rows of the raw data, there are 48 columns. Due to the this, not all variables are shown when using the head() function therefore, I have used the summary() function to gain information about the hidden variables.</p>
 </section>
 </section>
 <section id="research-questions" class="level1">
-<h1>Research Questions</h1>
+<h1>3.0 Research Questions</h1>
 <p>[In plain English, a simple statement of what question(s) your visualisation will attempt to address]</p>
 </section>
 <section id="data-preparation" class="level1">
-<h1>Data Preparation</h1>
+<h1>4.0 Data Preparation</h1>
 <p>[Steps taken to clean the data, exclude outliers, sanity check the data range and values, create summary statistics, grouped variables, etc. Show the first few rows of the processed data, if possible. Showing the code which does this where relevant]</p>
 </section>
 <section id="visualisation" class="level1">
-<h1>Visualisation</h1>
+<h1>5.0 Visualisation</h1>
 <p>[Graph or graphs. Documentation explaining any motivation (although good graph labelling is better than explanation in the accompanying text). Code for producing graph(s)]</p>
 </section>
 <section id="summary" class="level1">
-<h1>Summary</h1>
+<h1>6.0 Summary</h1>
 <p>[Brief thoughts on what you have learnt, what you might do next if you had more time / more data]</p>
 </section>
 
